@@ -1,0 +1,52 @@
+﻿<Window
+    x:Class="RocPaSors.MainMenuWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:RocPaSors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="RocPaSors"
+    Width="1260"
+    Height="720"
+    AllowsTransparency="True"
+    WindowState="Maximized"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel Style="{StaticResource MainMenuBg}">
+            <StackPanel.Background>
+                <ImageBrush
+                    ImageSource="J:\RocPaSors Bg\Bg2Clear.png"
+                    Opacity="0.6"
+                    Stretch="Fill" />
+            </StackPanel.Background>
+            <MediaElement x:Name="MainMenuMusic" />
+            <StackPanel Margin="0px,200px">
+                <Grid Style="{StaticResource GameTitleContainer}">
+                    <TextBlock
+                        x:Name="MSG"
+                        Style="{StaticResource GameTitle}"
+                        Text="RocPaSors" />
+                </Grid>
+                <Button
+                    Click="Start_Game"
+                    Content="Start Game"
+                    Style="{StaticResource MainMenuBtn}" />
+                <Button
+                    Click="GoTo_MatchHistory"
+                    Content="Match History"
+                    Style="{StaticResource MainMenuBtn}" />
+                <Button
+                    Click="Back_ToStartUp"
+                    Content="Back To StartUp"
+                    Style="{StaticResource MainMenuBtn}" />
+                <Button
+                    Click="Exit_Game"
+                    Content="Exit"
+                    Style="{StaticResource MainMenuBtn}" />
+
+            </StackPanel>
+        </StackPanel>
+        <Frame x:Name="MatchHistoryPage" NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>

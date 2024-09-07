@@ -1,0 +1,46 @@
+﻿<Window
+    x:Class="RocPaSors.StartUp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:RocPaSors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="StartUp"
+    Width="1260"
+    Height="720"
+    AllowsTransparency="True"
+    PreviewKeyDown="Press_Enter"
+    WindowState="Maximized"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid Background="Black">
+
+        <MediaElement x:Name="StartUpMusic" />
+        <Button x:Name="StartUpBtn" Style="{StaticResource StartUpBtn}">
+            <Button.Background>
+                <ImageBrush
+                    ImageSource="J:\RocPaSors Bg\LogoClear.png"
+                    Opacity="0.8"
+                    Stretch="Uniform"
+                    Viewport="265,125,1000,300"
+                    ViewportUnits="Absolute" />
+            </Button.Background>
+            <StackPanel Height="516">
+                <TextBlock Style="{StaticResource GameTitleLogin}" Text="RocPaSors" />
+                <TextBlock
+                    x:Name="StartText"
+                    Style="{StaticResource PressAnyKey}"
+                    Text="Press Enter To Continue">
+                    <TextBlock.Triggers>
+                        <EventTrigger RoutedEvent="Loaded">
+                            <BeginStoryboard Storyboard="{StaticResource AnimateFlicker}" />
+                        </EventTrigger>
+                    </TextBlock.Triggers>
+                </TextBlock>
+            </StackPanel>
+        </Button>
+        <Frame x:Name="NameBox" NavigationUIVisibility="Hidden" />
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MainWindow - Copy.xaml.cs" />
+    <Compile Remove="MatchFinish.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="MatchFinish.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Page\ExitBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

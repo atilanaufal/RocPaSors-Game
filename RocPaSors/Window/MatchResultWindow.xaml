@@ -1,0 +1,70 @@
+﻿<Window
+    x:Class="RocPaSors.MatchResultWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:RocPaSors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="RocPaSors"
+    Width="1260"
+    Height="720"
+    AllowsTransparency="True"
+    WindowState="Maximized"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid x:Name="MatchResultContainer" Background="Gray">
+        <MediaElement x:Name="MatchResultMusic" />
+        <StackPanel VerticalAlignment="Center">
+            <Grid
+                Width="900px"
+                Height="100px"
+                Margin="0px,20px,0px,0px"
+                Background="WhiteSmoke"
+                Opacity="1">
+                <TextBlock
+                    x:Name="MatchResultTitle"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="50px"
+                    FontStyle="Italic"
+                    FontWeight="DemiBold"
+                    Text="Match Result" />
+            </Grid>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <StackPanel x:Name="RoundScore" Style="{StaticResource ScoreBoard}">
+                    <ListBoxItem
+                        x:Name="RoundScoreTitle"
+                        Content="Round"
+                        Style="{StaticResource ScoreBoardTitle}" />
+
+                </StackPanel>
+                <StackPanel x:Name="PlyrScore" Style="{StaticResource ScoreBoard}">
+                    <ListBoxItem
+                        x:Name="PlayerScoreTitle"
+                        Content="Player"
+                        Style="{StaticResource ScoreBoardTitle}" />
+
+                </StackPanel>
+                <StackPanel x:Name="OpScore" Style="{StaticResource ScoreBoard}">
+                    <ListBoxItem
+                        x:Name="OpScoreTitle"
+                        Content="Opponent"
+                        Style="{StaticResource ScoreBoardTitle}" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button
+                    x:Name="RestartBtn"
+                    Click="RestartBtn_Click"
+                    Content="Restart"
+                    Style="{StaticResource MatchResultBtn}" />
+                <Button
+                    x:Name="MainMenuBtn"
+                    Click="MainMenuBtn_Click"
+                    Content="Main Menu"
+                    Style="{StaticResource MatchResultBtn}" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocPaSors", "RocPaSors\RocPaSors.csproj", "{0F19FF7C-8A56-42D2-A8E1-E2BAB26D54E8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RocPaSorsSetup", "RocPaSorsSetup\RocPaSorsSetup.vdproj", "{24481C44-23DF-4B32-AEBF-A84C7ED7BF37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F19FF7C-8A56-42D2-A8E1-E2BAB26D54E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F19FF7C-8A56-42D2-A8E1-E2BAB26D54E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F19FF7C-8A56-42D2-A8E1-E2BAB26D54E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F19FF7C-8A56-42D2-A8E1-E2BAB26D54E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24481C44-23DF-4B32-AEBF-A84C7ED7BF37}.Debug|Any CPU.ActiveCfg = Debug
+		{24481C44-23DF-4B32-AEBF-A84C7ED7BF37}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43EC1EFB-12D3-47F2-A8D1-89E0DCD2CCA6}
+	EndGlobalSection
+EndGlobal

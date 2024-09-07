@@ -1,0 +1,157 @@
+﻿<Window
+    x:Class="RocPaSors.GameMatch"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:RocPaSors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="RocPaSors"
+    Width="1260"
+    Height="720"
+    AllowsTransparency="True"
+    PreviewKeyDown="Press_Key"
+    WindowState="Maximized"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid x:Name="MatchWindow">
+        <Grid.Background>
+            <ImageBrush
+                ImageSource="J:\RocPaSors Bg\Bg7.jpg"
+                Opacity="0.9"
+                Stretch="UniformToFill" />
+        </Grid.Background>
+        <MediaElement x:Name="RoundSound" />
+        <TextBlock Style="{StaticResource opponentName}" />
+        <ListView Style="{StaticResource roundContainer}">
+            <TextBlock Style="{StaticResource roundContent}" Text="R" />
+            <TextBlock Style="{StaticResource roundContent}" Text="O" />
+            <TextBlock Style="{StaticResource roundContent}" Text="U" />
+            <TextBlock Style="{StaticResource roundContent}" Text="N" />
+            <TextBlock Style="{StaticResource roundContent}" Text="D" />
+            <TextBlock
+                x:Name="Round"
+                Style="{StaticResource roundContent}"
+                Text="1" />
+        </ListView>
+
+        <TextBlock
+            x:Name="OpponentScore"
+            Padding="0px,15px,200px,15px"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            FontSize="50px"
+            Foreground="WhiteSmoke"
+            Opacity="0.8">
+            0
+        </TextBlock>
+
+        <TextBlock
+            Padding="25px"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="50px"
+            FontStyle="Italic"
+            Foreground="WhiteSmoke"
+            Opacity="0.8"
+            Text="VS" />
+
+        <Button
+            x:Name="Rock2"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Style="{StaticResource playerBtnHover}">
+
+            <Image
+                x:Name="oprck"
+                Width="125px"
+                Height="125px"
+                Source="J:\Icon\RocPaSors\fist.png" />
+        </Button>
+
+        <Button
+            x:Name="Paper2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Style="{StaticResource playerBtnHover}">
+
+            <Image
+                x:Name="opppr"
+                Width="125px"
+                Height="125px"
+                Source="J:\Icon\RocPaSors\hand-paper.png" />
+        </Button>
+
+        <Button
+            x:Name="Scissors2"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Style="{StaticResource playerBtnHover}">
+            <Image
+                x:Name="opsci"
+                Width="125px"
+                Height="125px"
+                Source="J:\Icon\RocPaSors\scissors.png" />
+        </Button>
+
+        <Button
+            x:Name="Rock1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Style="{StaticResource playerBtnHover}">
+            <Image
+                x:Name="plyrrck"
+                Width="125px"
+                Height="125px"
+                Source="J:\Icon\RocPaSors\fist.png" />
+        </Button>
+
+        <Button
+            x:Name="Paper1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Style="{StaticResource playerBtnHover}">
+            <Image
+                x:Name="plyrppr"
+                Width="125px"
+                Height="125px"
+                Source="J:\Icon\RocPaSors\hand-paper.png" />
+        </Button>
+
+        <Button
+            x:Name="Scissors1"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Style="{StaticResource playerBtnHover}">
+            <Image
+                x:Name="plyrsci"
+                Width="125px"
+                Height="125px"
+                Source="J:\Icon\RocPaSors\scissors.png" />
+        </Button>
+
+        <TextBlock x:Name="plyrName" Style="{StaticResource playerName}" />
+        <TextBlock
+            x:Name="PlayerScore"
+            Padding="200px,15px,0px,15px"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            FontSize="50px"
+            Foreground="WhiteSmoke"
+            Opacity="0.8"
+            Text="0" />
+
+        <Button
+            x:Name="Start"
+            Click="Start_Round"
+            Content="Start"
+            Style="{StaticResource startBtn}" />
+        <Button
+            x:Name="Exit"
+            Click="Exit_Match"
+            Content="Exit"
+            Style="{StaticResource exitMatchBtn}" />
+
+        <Button x:Name="NextRoundBtn" Style="{StaticResource NextRoundBtn}" />
+    </Grid>
+
+</Window>
